@@ -32,7 +32,7 @@ function manualCompile(handlebarsPath, templateCompilerPath, template){
   vm.runInContext('compiledJS = exports.precompile(template);', context);
 
   return context.compiledJS;
-};
+}
 
 module.exports = function(grunt) {
   'use strict';
@@ -75,7 +75,7 @@ module.exports = function(grunt) {
         return options.templateName(file);
       },
       templateRegistration: function(name, contents) {
-        return 'Ember.TEMPLATES[' + JSON.stringify(name) + '] = ' + contents + ';'
+        return 'Ember.TEMPLATES[' + JSON.stringify(name) + '] = ' + contents + ';';
       },
       handlebarsPath: null,
       templateCompilerPath: null
